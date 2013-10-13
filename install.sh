@@ -8,11 +8,14 @@ curr_dir=`pwd`
 
 #Set up vim
 [[ -d $HOME/.vim ]] && mv $HOME/.vim $HOME/.vim-bkp
-#ln -s $curr_dir/vim $HOME/.vim
+tar -xvzf vim.tar.gz 
+ln -s $curr_dir/.vim $HOME/.vim
 
 [[ -f $HOME/.vimrc ]] && mv $HOME/.vimrc $HOME/.vimrc-bkp
-#ln -s $HOME/.vim/vimrc $HOME/.vimrc
-tar -xvzf vim.tar.gz
+
+ln -s $curr_dir/.vimrc $HOME/.vimrc
+ln -s $curr_dir/.muttrc  $HOME/.muttrc
+ln -s $curr_dir/.bash_aliases $HOME/.bash_aliases
 
 
 touch $HOME/.baseline_dotfiles
