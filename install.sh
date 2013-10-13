@@ -14,3 +14,5 @@ curr_dir=`pwd`
 #ln -s $HOME/.vim/vimrc $HOME/.vimrc
 tar -xvzf vim.tar.gz
 
+
+touch $HOME/.baseline_dotfiles
