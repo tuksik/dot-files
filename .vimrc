@@ -6,7 +6,16 @@
 
  " let Vundle manage Vundle
  " required! 
- Bundle 'gmarik/vundle'
+Bundle 'gmarik/vundle'
+Bundle 'Puppet-Syntax-Highlighting'
+Bundle 'SingleCompile'
+Bundle 'Tabular'
+Bundle 'fugitive.vim' 
+Bundle 'snipMate'
+Bundle 'snipmate-snippets'
+Bundle 'surround.vim'
+Bundle 'Syntastic'
+
 
 filetype plugin indent on     " required!
  "
