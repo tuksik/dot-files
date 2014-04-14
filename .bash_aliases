@@ -1,9 +1,9 @@
-
 #APT
 alias dql='dpkg-query -L '
 #alias au0='apt-get update && apt-get -su dist-upgrade '
 alias au1='apt-get update '
 alias au2='apt-get upgrade '
+alias au3='unattended-upgrade'
 alias ac1='apt-cache search '
 alias ac2='apt-cache show '
 alias ai1='apt-get install  '
