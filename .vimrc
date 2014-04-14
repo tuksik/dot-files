@@ -21,6 +21,7 @@ Bundle 'The-NERD-Commenter'
 Bundle 'shawncplus/phpcomplete.vim'
 Bundle "mattn/emmet-vim"
 Bundle 'The-NERD-tree'
+Bundle 'SuperTab'
 
 
 "My rows
@@ -45,44 +46,17 @@ autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 "http://stackoverflow.com/questions/1224838/vim-php-omni-completion
 au FileType php set omnifunc=phpcomplete#CompletePHP
-inoremap <C-space> <C-X><C-O>
-"function! SuperCleverTab()
-"if strpart(getline('.'), 0, col('.') - 1) =~ '^\s*$'
-	"return "\"
-"else
-	"if &omnifunc != ''
-		"return "\\"
-	"elseif &dictionary != ''
-		"return "\"
-	"else
-		"return "\"
-	"endif
-"endif
-"endfunction
+"inoremap <C-space> <C-X><C-O>
+"http://vim.wikia.com/wiki/Make_Vim_completion_popup_menu_work_just_like_in_an_IDE
+:set completeopt=longest,menuone
+:inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
+  \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
 
-"inoremap <Tab> <C-R>=SuperCleverTab()<cr>	 
-" My Bundles here:
- "
- " original repos on github
- "Bundle 'tpope/vim-fugitive'
- "Bundle 'Lokaltog/vim-easymotion'
- "Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
- "Bundle 'tpope/vim-rails.git'
- " vim-scripts repos
- "Bundle 'L9'
- "Bundle 'FuzzyFinder'
- " non github repos
- "Bundle 'git://git.wincent.com/command-t.git'
- " git repos on your local machine (ie. when working on your own plugin)
- "Bundle 'file:///Users/gmarik/path/to/plugin'
- " ...
+inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
+  \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
 
- "
- " Brief help
- " :BundleList          - list configured bundles
- " :BundleInstall(!)    - install(update) bundles
- " :BundleSearch(!) foo - search(or refresh cache first) for foo
- " :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
- "
- " see :h vundle for more details or wiki for FAQ
- " NOTE: comments after Bundle command are not allowed..
+"emmet
+"let g:user_emmet_leader_key ='<C-Z>' 
+let g:use_emmet_complete_tag = 1
+imap ,, <C-y>,
