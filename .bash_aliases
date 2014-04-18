@@ -11,10 +11,10 @@ alias ai1='apt-get install  '
 #GIT
 alias gst='git status'
 alias gcm='git commit -m '
-alias glog='git log'
+alias glog="git log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 alias gadd='git add .'
 alias gadu='git add -u .'
-
+alias gco='git checkout '
 
 #Which programm use port X
 alias wp1='netstat -tulpn'
