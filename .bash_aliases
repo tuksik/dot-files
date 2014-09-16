@@ -93,9 +93,15 @@ alias fwb="for e in *; do mv "$e" "`echo $e | sed -e 's/\ /_/g'`"; done;"
 #Zarafa
 alias putrules='cat addrules.txt >> /etc/zarafa/movetopublic.cfg'
 alias catrules='cat  /etc/zarafa/movetopublic.cfg'
-alias tmail='tail -100 /var/log/mail.log'
-alias tdagent='tail -100 /var/log/zarafa/dagent.log'
-alias tsp='tail -100 /var/log/zarafa/spooler.log'
+alias tza='tail -100 /var/log/zarafa/dagent.log'
+alias tzsp='tail -100 /var/log/zarafa/spooler.log'
+alias tzs='tail -100 /var/log/zarafa/server.log'
 alias hgrules='cat /etc/zarafa/movetopublic.cfg|grep '
 alias edmov2='vim /usr/share/zarafa-dagent/python/plugins/movetopublic2.py'
 alias edout='vim /usr/share/zarafa-spooler/python/plugins/outmovetopublic.py'
+#Logs
+alias tss='tail -100 /var/log/syslog'
+alias tmail='tail -100 /var/log/mail.log'
+alias tau='tail -100 /var/log/auth.log'
+
+
