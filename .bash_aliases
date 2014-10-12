@@ -103,5 +103,7 @@ alias edout='vim /usr/share/zarafa-spooler/python/plugins/outmovetopublic.py'
 alias tss='tail -100 /var/log/syslog'
 alias tmail='tail -100 /var/log/mail.log'
 alias tau='tail -100 /var/log/auth.log'
+#Duplicity
+alias dupc='duplicity collection-status file:///backupdev/bck_dup/'
 
 
