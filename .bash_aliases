@@ -82,20 +82,18 @@ alias ll='ls -l'
 alias cp='cp -iv'
 alias rm='rm -iv'
 alias mv='mv -iv'
-alias grep='grep --color=auto -in'
+alias grep='grep --color=auto -in '
 alias ..='cd ..'
 alias delsvn='find -name "\.svn" -exec rm -rf {} \;'
 alias cdiff="svn diff | egrep '^Index: ' | cut -f2 -d' '|xargs -i  7z a -tzip ../diff.zip {}"
 alias hg1='history|egrep '
 alias fwb="for e in *; do mv "$e" "`echo $e | sed -e 's/\ /_/g'`"; done;"
 #alias mp4to=for f in $(ls -1 *.mp4);do avconv -i  "$f" "`echo $f | sed -e 's/mp4//g'`mp3";done;
+srvst='service --status-all'
  
 #Zarafa
 alias putrules='cat addrules.txt >> /etc/zarafa/movetopublic.cfg'
 alias catrules='cat  /etc/zarafa/movetopublic.cfg'
-alias tza='tail -100 /var/log/zarafa/dagent.log'
-alias tzsp='tail -100 /var/log/zarafa/spooler.log'
-alias tzs='tail -100 /var/log/zarafa/server.log'
 alias hgrules='cat /etc/zarafa/movetopublic.cfg|grep '
 alias edmov2='vim /usr/share/zarafa-dagent/python/plugins/movetopublic2.py'
 alias edout='vim /usr/share/zarafa-spooler/python/plugins/outmovetopublic.py'
@@ -103,6 +101,12 @@ alias edout='vim /usr/share/zarafa-spooler/python/plugins/outmovetopublic.py'
 alias tss='tail -100 /var/log/syslog'
 alias tmail='tail -100 /var/log/mail.log'
 alias tau='tail -100 /var/log/auth.log'
+alias tza='tail -100 /var/log/zarafa/dagent.log'
+alias tzsp='tail -100 /var/log/zarafa/spooler.log'
+alias tzs='tail -100 /var/log/zarafa/server.log'
+alias tzzs='tail -100 /var/log/zabbix-server/zabbix_server.log'
+alias tzza='tail -100 /var/log/zabbix-agent/zabbix_agentd.log'
+
 #Duplicity
 alias dupc='duplicity collection-status file:///backupdev/bck_dup/'
 
