@@ -89,9 +89,9 @@ alias cdiff="svn diff | egrep '^Index: ' | cut -f2 -d' '|xargs -i  7z a -tzip ..
 alias hg1='history|egrep '
 alias fwb="for e in *; do mv "$e" "`echo $e | sed -e 's/\ /_/g'`"; done;"
 #alias mp4to=for f in $(ls -1 *.mp4);do avconv -i  "$f" "`echo $f | sed -e 's/mp4//g'`mp3";done;
-srvst='service --status-all'
+alias srvst='service --status-all'
 #Salt
-saltc='salt-call --local state.highstate -l debug'
+alias saltc='salt-call --local state.highstate -l debug'
  
 #Zarafa
 alias putrules='cat addrules.txt >> /etc/zarafa/movetopublic.cfg'
