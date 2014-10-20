@@ -19,7 +19,7 @@ ln -s $curr_dir/.bash_aliases $HOME/.bash_aliases
 
 
 touch $HOME/.baseline_dotfiles
-apt-get install vim mutt mc curl
+apt-get -y install vim  mc curl
 #Fix git prompt
 curl -o ~/.git-prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
 echo 'source ~/.git-prompt.sh' >> ~/.bashrc
