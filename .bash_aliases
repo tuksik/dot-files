@@ -114,4 +114,13 @@ alias tzza='tail -100 /var/log/zabbix-agent/zabbix_agentd.log'
 #Duplicity
 alias dupc='duplicity collection-status file:///backupdev/bck_dup/'
 
+#Docker
+alias dps='docker ps -a'
+alias dim='docker images'
+alias dipa="docker inspect -f '{{ .NetworkSettings.IPAddress }}' "
+alias dport="docker inspect -f '{{range $p, $conf := .NetworkSettings.Ports}} {{$p}} -> {{(index $conf 0).HostPort}} {{end}}' "
+alias dlogs="docker logs "
+alias ddel='docker rm `docker ps -a -q -f status=exited`'
+
+
 
