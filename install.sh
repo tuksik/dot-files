@@ -23,4 +23,11 @@ apt-get -y install vim  mc curl
 #Fix git prompt
 curl -o ~/.git-prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
 echo 'source ~/.git-prompt.sh' >> ~/.bashrc
+echo 'source ~/.git-prompt.sh' >> ~/.bashrc                                                                                                          
+if [ -z "$(getent passwd codio)" ]; then                                                                                                             
+    echo " codio exists"                                                                                                                              
+    echo 'source ~/.bash_aliases' >> ~/.bashrc                                                                                                   
+else                                                                                                                                                 
+    echo " codio DO NOT exist"                                                                                                                    
+fi                                                                                                                                                   
 . ~/.bashrc
