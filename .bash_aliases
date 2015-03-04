@@ -68,6 +68,7 @@ alias gadd='git add .'
 alias gadu='git add -u .'
 alias gco='git checkout '
 alias gres='git reset HEAD '
+alias garc='git archive HEAD -o '
 
 
 #Which programm use port X
