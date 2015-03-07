@@ -123,5 +123,9 @@ alias dports="docker inspect --format='{{range \$p, \$conf := .NetworkSettings.P
 alias dlogs="docker logs "
 alias ddel='docker rm `docker ps -a -q -f status=exited`'
 
+#Salt
+alias ema='vim /etc/salt/master'
+alias rma='service salt-master restart'
+
 
 
