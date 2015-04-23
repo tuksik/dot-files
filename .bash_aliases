@@ -126,6 +126,8 @@ alias ddel='docker rm `docker ps -a -q -f status=exited`'
 #Salt
 alias ema='vim /etc/salt/master'
 alias rma='service salt-master restart'
-
-
-
+alias m1='salt "mi01*" '
+alias m2='salt "mi02*" '
+alias m3='salt "mi03*" '
+alias rmi='service salt-minion restart'
+alias sl='salt-call --local '

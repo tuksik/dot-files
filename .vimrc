@@ -35,7 +35,8 @@ Bundle 'chrisgillis/vim-bootstrap3-snippets'
 
 "My rows
 set number
-set ts=4 sw=4
+set ts=2 sw=2
+set expandtab
 nmap <F9> :SCCompile<cr>
 nmap <F10> :SCCompileRun<cr>
 colorscheme evening
@@ -71,3 +72,5 @@ inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
 "let g:user_emmet_leader_key ='<C-Z>' 
 let g:use_emmet_complete_tag = 1
 imap ,, <C-y>,
+" Force using the Django template syntax file
+ let g:sls_use_jinja_syntax = 0
