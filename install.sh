@@ -16,6 +16,7 @@ ln -s $curr_dir/.vim $HOME/.vim
 ln -s $curr_dir/.vimrc $HOME/.vimrc
 ln -s $curr_dir/.muttrc  $HOME/.muttrc
 ln -s $curr_dir/.bash_aliases $HOME/.bash_aliases
+ln -s $curr_dir/.tmux.conf  $HOME/.tmux.conf
 
 
 touch $HOME/.baseline_dotfiles
