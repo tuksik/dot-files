@@ -93,6 +93,9 @@ alias hg1='history|egrep '
 alias fwb="for e in *; do mv "$e" "`echo $e | sed -e 's/\ /_/g'`"; done;"
 #alias mp4to=for f in $(ls -1 *.mp4);do avconv -i  "$f" "`echo $f | sed -e 's/mp4//g'`mp3";done;
 alias srvst='service --status-all'
+alias duinfo='du --block-size=MiB --max-depth=1 | sort -n'
+
+
 #Salt
 alias saltc='salt-call --local state.highstate -l debug'
  
