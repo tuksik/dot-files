@@ -1,3 +1,6 @@
+if [ -f ~/.bash_private]; then
+    source ~/.bash_private
+fi
 if [ -f /etc/bash_completion ]; then
     source /etc/bash_completion
 fi
@@ -121,6 +124,7 @@ alias tzza='tail -100 /var/log/zabbix-agent/zabbix_agentd.log'
 alias dupc='duplicity collection-status file:///backupdev/bck_dup/'
 
 #Docker
+alias dk=docker
 alias dps='docker ps -a'
 alias dim='docker images'
 alias dipa="docker inspect -f '{{ .NetworkSettings.IPAddress }}' "
