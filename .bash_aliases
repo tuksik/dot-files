@@ -1,4 +1,4 @@
-if [ -f ~/.bash_private]; then
+if [ -f ~/.bash_private ]; then
     source ~/.bash_private
 fi
 if [ -f /etc/bash_completion ]; then
