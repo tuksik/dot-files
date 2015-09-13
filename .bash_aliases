@@ -79,6 +79,8 @@ function gexp() { git diff-tree -r --no-commit-id --name-only --diff-filter=ACMR
 #Which programm use port X
 alias wp1='netstat -tulpn'
 alias wp2='lsof -Pnl +M -i4'
+#Zombies
+function wmz() { ps aux | awk '"[Zz]" ~ $8 { printf("%s, PID = %d\n", $8, $2); }' ;}
 
 #Combinations
 alias la='ls -la --color=always'
