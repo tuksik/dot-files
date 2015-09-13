@@ -1,3 +1,12 @@
+# Mutt & Maildir Mini-HOWTO
+# http://www.elho.net/mutt/maildir/
+set mbox_type=Maildir
+set folder="~/Maildir/"
+set mask="!^\\.[^.]"
+set record=".Sent"
+set postponed=".Drafts"
+set spoolfile="~/Maildir/"
+
 set realname='Tuxar'
 set from=tuxar@orma.ath.cx
 set hostname=orma.ath.cx
