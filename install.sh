@@ -8,7 +8,7 @@ curr_dir=$HOME/dot-files
 
 #Set up vim
 [[ -d $HOME/.vim ]] && mv $HOME/.vim $HOME/.vim-bkp
-tar -xvzf vim.tar.gz 
+tar -xvzf $curr_dir/vim.tar.gz 
 ln -s $curr_dir/.vim $HOME/.vim
 
 [[ -f $HOME/.vimrc ]] && mv $HOME/.vimrc $HOME/.vimrc-bkp
