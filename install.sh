@@ -3,7 +3,7 @@
 #Initialize submodules
 #git submodule init; git submodule update;
 
-curr_dir=`pwd`
+curr_dir=$HOME/dot-files
 
 
 #Set up vim
