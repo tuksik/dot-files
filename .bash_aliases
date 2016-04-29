@@ -133,6 +133,7 @@ alias dipa="docker inspect -f '{{ .NetworkSettings.IPAddress }}' "
 alias dports="docker inspect --format='{{range \$p, \$conf := .NetworkSettings.Ports}} {{\$p}} -> {{(index \$conf 0).HostPort}} {{end}}'"
 alias dlogs="docker logs "
 alias ddel='docker rm `docker ps -a -q -f status=exited`'
+alias dkkall='for d in $(dk ps -q);do docker kill $d;done;'
 
 #Salt
 alias ema='vim /etc/salt/master'
