@@ -99,10 +99,11 @@ alias fwb="for e in *; do mv "$e" "`echo $e | sed -e 's/\ /_/g'`"; done;"
 #alias mp4to=for f in $(ls -1 *.mp4);do avconv -i  "$f" "`echo $f | sed -e 's/mp4//g'`mp3";done;
 alias srvst='service --status-all'
 alias duinfo='du --block-size=MiB --max-depth=1 | sort -n'
+alias "cs=xclip -selection clipboard"
+alias "vs=xclip -o -selection clipboard"
 
 
-#Salt
-alias saltc='salt-call --local state.highstate -l debug'
+
  
 #Zarafa
 alias putrules='cat addrules.txt >> /etc/zarafa/movetopublic.cfg'
@@ -138,6 +139,7 @@ alias dkc=docker-compose
 alias dkm=docker-machine
 
 #Salt
+alias saltc='salt-call --local state.highstate -l debug'
 alias ema='vim /etc/salt/master'
 alias rma='service salt-master restart'
 alias m1='salt "mi01*" '
