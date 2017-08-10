@@ -11,12 +11,6 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-"PHP Coding Standards Fixer
-"Bundle 'stephpy/vim-php-cs-fixer'
-"Bundle 'Puppet-Syntax-Highlighting'
-"Bundle 'SingleCompile'
-"Bundle 'Tabular'
-
 "Git Wrapper https://github.com/tpope/vim-fugitive
 Bundle 'fugitive.vim'
 "Bundle 'snipMate'
@@ -39,7 +33,8 @@ Bundle 'chrisgillis/vim-bootstrap3-snippets'
 "Plugin 'file:///home/codio/dot-files/.vim/bundle/vim-multiple-cursors/plugin'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-"Bundle 'Valloric/YouCompleteMe'
+Bundle 'Valloric/YouCompleteMe'
+Plugin 'nvie/vim-flake8'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -75,7 +70,7 @@ map ι i
 "Code completion
 filetype plugin indent on     " required!
 "http://www.belchak.com/2011/01/31/code-completion-for-python-and-django-in-vim/
-autocmd FileType python set omnifunc=pythoncomplete#Complete
+"autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
@@ -121,3 +116,6 @@ au BufNewFile,BufRead *.js, *.html, *.css
 	\ set tabstop=2
 	\ softtabstop=2
 	\ shiftwidth=2
+"Py Syntax Checking/Highlighting
+let python_highlight_all=1
+syntax on
