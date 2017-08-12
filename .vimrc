@@ -1,17 +1,22 @@
-set nocompatible               " be iMproved
- filetype off                   " required!
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
- set rtp+=~/.vim/bundle/vundle/
- call vundle#rc()
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
- " let Vundle manage Vundle
- " required! 
-Bundle 'gmarik/vundle'
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
 "PHP Coding Standards Fixer
-Bundle 'stephpy/vim-php-cs-fixer'
-Bundle 'Puppet-Syntax-Highlighting'
-Bundle 'SingleCompile'
-Bundle 'Tabular'
+"Bundle 'stephpy/vim-php-cs-fixer'
+"Bundle 'Puppet-Syntax-Highlighting'
+"Bundle 'SingleCompile'
+"Bundle 'Tabular'
+
 "Git Wrapper https://github.com/tpope/vim-fugitive
 Bundle 'fugitive.vim'
 "Bundle 'snipMate'
@@ -31,14 +36,32 @@ Bundle "mattn/emmet-vim"
 Bundle 'The-NERD-tree'
 Bundle 'SuperTab'
 Bundle 'chrisgillis/vim-bootstrap3-snippets'
+"Plugin 'file:///home/codio/dot-files/.vim/bundle/vim-multiple-cursors/plugin'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+"Bundle 'Valloric/YouCompleteMe'
 
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
 
 "My rows
 set number
-set ts=2 sw=2
-set expandtab
-nmap <F9> :SCCompile<cr>
-nmap <F10> :SCCompileRun<cr>
+"set ts=4 sw=4
+"set expandtab
+"nmap <F9> :SCCompile<cr>
+"nmap <F10> :SCCompileRun<cr>
 colorscheme evening
 imap ff <Esc>
 "Bulgarian phonetic
@@ -73,4 +96,28 @@ inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
 let g:use_emmet_complete_tag = 1
 imap ,, <C-y>,
 " Force using the Django template syntax file
- let g:sls_use_jinja_syntax = 0
+let g:sls_use_jinja_syntax = 0
+
+"https://realpython.com/blog/python/vim-and-python-a-match-made-in-heaven/
+"split navigations
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+"PEP8
+au BufNewFile,BufRead *.py
+	\ set tabstop=4
+	\ softtabstop=4
+	\ shiftwidth=4
+	\ textwidth=79
+	\ expandtab
+	\ autoindent
+	\ fileformat=unix
+highlight BadWhitespace guibg=red ctermbg=darkred
+au BufNewFile,BufRead *.py
+	\ match BadWhitespace /\s\+$/
+"Full stack
+au BufNewFile,BufRead *.js, *.html, *.css
+	\ set tabstop=2
+	\ softtabstop=2
+	\ shiftwidth=2
