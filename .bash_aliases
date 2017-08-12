@@ -136,6 +136,7 @@ alias ddel='docker rm `docker ps -a -q -f status=exited`'
 alias dkkall='for d in $(dk ps -q);do docker kill $d;done;'
 alias dkc=docker-compose
 alias dkm=docker-machine
+alias dkr='python ~/dock/docker_registry_cli/browser.py localhost:5000 '
 
 #Salt
 alias ema='vim /etc/salt/master'
