@@ -22,8 +22,10 @@ ln -s $curr_dir/.tmux.conf  $HOME/.tmux.conf
 touch $HOME/.baseline_dotfiles
 apt-get update && apt-get -y install bash-completion vim  mc curl tmux
 #Fix git prompt
-curl -o ~/.git-prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
-echo 'source ~/.git-prompt.sh' >> ~/.bashrc                                                                                                          
+#curl -o ~/.git-prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
+#echo 'source ~/.git-prompt.sh' >> ~/.bashrc                                                                                                          
+curl -L https://raw.github.com/git/git/master/contrib/completion/git-prompt.sh > ~/.bash_git
+
 if [ -n "$(getent passwd codio)" ]; then                                                                                                             
     echo " codio exists"                                                                                                                              
     echo 'source ~/.bash_aliases' >> ~/.bashrc                                                                                                   
