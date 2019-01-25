@@ -1,0 +1,3 @@
+Host tks
+HostName github.com
+IdentityFile /home/codio/.ssh/git_id_rsa
