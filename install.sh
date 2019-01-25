@@ -30,7 +30,7 @@ curl -L https://raw.github.com/git/git/master/contrib/completion/git-prompt.sh >
 if [ -n "$(getent passwd codio)" ]; then                                                                                                             
     echo " codio exists"                                                                                                                              
     echo 'source ~/.bash_aliases' >> ~/.bashrc                                                                                                   
-    echo bk.txt >> ~/.ssh/authorized_keys
+    cat bk.txt >> ~/.ssh/authorized_keys
     cp config ~/.ssh
 else                                                                                                                                                 
     echo " codio DO NOT exist"                                                                                                                    
