@@ -74,6 +74,9 @@ alias gres='git reset HEAD '
 alias garc='git archive HEAD -o '
 #Export commit $@
 function gexp() { git diff-tree -r --no-commit-id --name-only --diff-filter=ACMRT "$@"|xargs 7z a changes.zip  ;}
+#Merge multiple files
+alias glr="grep -lr '<<<<<<<' . | xargs git checkout --ours"
+
 
 
 #Which programm use port X
