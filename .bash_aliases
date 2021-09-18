@@ -104,10 +104,10 @@ alias srvst='service --status-all'
 alias duinfo='du --block-size=MiB --max-depth=1 | sort -n'
 alias "cs=xclip -selection clipboard"
 alias "vs=xclip -o -selection clipboard"
+alias sd=~/dev/py-snips/.lib/sd.sh
 
 
 
- 
 #Zarafa
 alias putrules='cat addrules.txt >> /etc/zarafa/movetopublic.cfg'
 alias catrules='cat  /etc/zarafa/movetopublic.cfg'
