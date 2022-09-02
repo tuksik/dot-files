@@ -86,7 +86,7 @@ alias wp2='lsof -Pnl +M -i4'
 function wmz() { ps aux | awk '"[Zz]" ~ $8 { printf("%s, PID = %d\n", $8, $2); }' ;}
 
 #Combinations
-alias la='ls -la --color=always'
+alias la='ls -lah --color=always'
 alias ls='ls -F --color=always'
 alias dir='dir -F --color=always'
 alias ll='ls -l'
@@ -151,3 +151,6 @@ alias m2='salt "mi02*" '
 alias m3='salt "mi03*" '
 alias rmi='service salt-minion restart'
 alias sl='salt-call --local '
+
+# Kopano
+alias zplistf='php /usr/share/z-push/backend/kopano/listfolders.php'
