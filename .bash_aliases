@@ -41,6 +41,15 @@ lt_blue=$(tput -Txterm setaf 6)
 
 bold=$(tput -Txterm bold)
 reset=$(tput -Txterm sgr0)
+# function to set terminal title  
+function set-title() {
+  if [[ -z "$ORIG" ]]; then
+    ORIG=$PS1
+  fi
+  TITLE="\[\e]2;$*\a\]"
+  PS1=${ORIG}${TITLE}
+}
+
 
 # Nicely formatted terminal prompt
 export PS1='\n\[$bold\]\[$black\][\[$dk_blue\]\@\[$black\]]-[\[$green\]\u\[$yellow\]@\[$green\]\h\[$black\]]-[\[$pink\]\w\[$black\]]\[\033[0;33m\]$(__vcs_name) \[\033[00m\]\[$reset\]\n\[$reset\]\$ '
@@ -154,3 +163,6 @@ alias sl='salt-call --local '
 
 # Kopano
 alias zplistf='php /usr/share/z-push/backend/kopano/listfolders.php'
+
+#Downloads
+alias ytd="yt-dlp -f 'bestvideo[height<=480]+bestaudio/best[height<=480]' "
